@@ -1,0 +1,12 @@
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="{{ data.imageUrl }}" alt="author-img">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{ data.author }}</h4><span class="handle">{{ data.handle }}</span>
+    {{ data.body }}
+    <like [isLiked]="data.liked" [totalLikes]="data.totalLikes"></like>
+  </div>
+</div>

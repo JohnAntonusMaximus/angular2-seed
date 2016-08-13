@@ -1,0 +1,13 @@
+<form>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" class="form-control" ngControl="firstName" #firstName="ngForm" required>
+        <div class="alert alert-danger"  *ngIf="firstName.touched && !firstName.valid">First name is required.</div>
+    </div>
+    <div class="form-group">
+        <label for="comment">Comment</label>
+        <textarea name="" id="comment" cols="30" rows="10" class="form-control" ngControl="comment" #comment="ngForm" required></textarea>
+        <div class="alert alert-danger" *ngIf="comment.touched && !comment.valid">A comment is required.</div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
